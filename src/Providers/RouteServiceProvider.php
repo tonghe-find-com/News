@@ -1,16 +1,16 @@
 <?php
 
-namespace TypiCMS\Modules\News\Providers;
+namespace Tonghe\Modules\News\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 use TypiCMS\Modules\Core\Facades\TypiCMS;
-use TypiCMS\Modules\News\Http\Controllers\Category\AdminController as CategoryAdminController;
-use TypiCMS\Modules\News\Http\Controllers\Item\AdminController;
-use TypiCMS\Modules\News\Http\Controllers\Category\ApiController as CategoryApiController;
-use TypiCMS\Modules\News\Http\Controllers\Item\ApiController;
-use TypiCMS\Modules\News\Http\Controllers\PublicController;
+use Tonghe\Modules\News\Http\Controllers\Category\AdminController as CategoryAdminController;
+use Tonghe\Modules\News\Http\Controllers\Item\AdminController;
+use Tonghe\Modules\News\Http\Controllers\Category\ApiController as CategoryApiController;
+use Tonghe\Modules\News\Http\Controllers\Item\ApiController;
+use Tonghe\Modules\News\Http\Controllers\PublicController;
 
 class RouteServiceProvider extends ServiceProvider
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace TypiCMS\Modules\News\Http\Controllers;
+namespace Tonghe\Modules\News\Http\Controllers;
 
 use Illuminate\View\View;
 use TypiCMS\Modules\Core\Http\Controllers\BasePublicController;
-use TypiCMS\Modules\News\Models\Newscategory;
-use TypiCMS\Modules\News\Models\News;
+use Tonghe\Modules\News\Models\Newscategory;
+use Tonghe\Modules\News\Models\News;
 use Illuminate\Http\Request;
 
 class PublicController extends BasePublicController

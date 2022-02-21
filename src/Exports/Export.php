@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\News\Exports;
+namespace Tonghe\Modules\News\Exports;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
@@ -12,7 +12,7 @@ use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
 use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 use TypiCMS\Modules\Core\Filters\FilterOr;
-use TypiCMS\Modules\News\Models\News;
+use Tonghe\Modules\News\Models\News;
 
 class Export implements WithColumnFormatting, ShouldAutoSize, FromCollection, WithHeadings, WithMapping
 {

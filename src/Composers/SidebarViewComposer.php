@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\News\Composers;
+namespace Tonghe\Modules\News\Composers;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Gate;

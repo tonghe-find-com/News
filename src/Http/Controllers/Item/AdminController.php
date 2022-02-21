@@ -1,16 +1,16 @@
 <?php
 
-namespace TypiCMS\Modules\News\Http\Controllers\Item;
+namespace Tonghe\Modules\News\Http\Controllers\Item;
 
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Maatwebsite\Excel\Facades\Excel;
 use TypiCMS\Modules\Core\Http\Controllers\BaseAdminController;
-use TypiCMS\Modules\Newsitems\Exports\Export;
-use TypiCMS\Modules\News\Http\Requests\FormRequest;
-use TypiCMS\Modules\News\Models\Newscategory;
-use TypiCMS\Modules\News\Models\News;
+use Tonghe\Modules\Newsitems\Exports\Export;
+use Tonghe\Modules\News\Http\Requests\FormRequest;
+use Tonghe\Modules\News\Models\Newscategory;
+use Tonghe\Modules\News\Models\News;
 
 class AdminController extends BaseAdminController
 {

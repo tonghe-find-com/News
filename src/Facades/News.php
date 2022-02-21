@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\News\Facades;
+namespace Tonghe\Modules\News\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\News\Models;
+namespace Tonghe\Modules\News\Models;
 
 use App\HasImage;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,8 +10,8 @@ use TypiCMS\Modules\Core\Models\Base;
 use TypiCMS\Modules\Files\Models\File;
 use TypiCMS\Modules\Files\Traits\HasFiles;
 use TypiCMS\Modules\History\Traits\Historable;
-use TypiCMS\Modules\News\Presenters\ModulePresenter;
-use TypiCMS\Modules\News\Models\Newscategory;
+use Tonghe\Modules\News\Presenters\ModulePresenter;
+use Tonghe\Modules\News\Models\Newscategory;
 use Illuminate\Database\Eloquent\Builder;
 
 class News extends Base

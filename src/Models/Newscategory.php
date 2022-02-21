@@ -1,6 +1,6 @@
 <?php
 
-namespace TypiCMS\Modules\News\Models;
+namespace Tonghe\Modules\News\Models;
 
 use App\HasList;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -9,8 +9,8 @@ use Spatie\Translatable\HasTranslations;
 use TypiCMS\Modules\Core\Models\Base;
 use TypiCMS\Modules\Files\Models\File;
 use TypiCMS\Modules\History\Traits\Historable;
-use TypiCMS\Modules\News\Presenters\ModulePresenter;
-use TypiCMS\Modules\News\Models\News;
+use Tonghe\Modules\News\Presenters\ModulePresenter;
+use Tonghe\Modules\News\Models\News;
 
 class Newscategory extends Base
 {
