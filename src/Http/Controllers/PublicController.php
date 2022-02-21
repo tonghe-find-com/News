@@ -25,7 +25,7 @@ class PublicController extends BasePublicController
                             ->orderBy('show_date', 'DESC')
                             ->paginate(self::$ONE_PAGE_SHOW_ITEM_AMOUNT);
 
-        return view('newscategories::public.index')
+        return view('news::public.index')
             ->with(compact('categories', 'model', 'list'));
     }
 
@@ -44,7 +44,7 @@ class PublicController extends BasePublicController
                                 ->paginate(self::$ONE_PAGE_SHOW_ITEM_AMOUNT);
 
 
-        return view('newscategories::public.index')
+        return view('news::public.index')
             ->with(compact('categories', 'model', 'list' ));
     }
 
@@ -71,7 +71,7 @@ class PublicController extends BasePublicController
                         ->orderBy('show_date','DESC')
                         ->first();
 
-        return view('newscategories::public.show')
+        return view('news::public.show')
             ->with(compact('categories', 'model', 'next', 'prev'));
     }
 
