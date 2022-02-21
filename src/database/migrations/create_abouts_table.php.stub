@@ -1,0 +1,73 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateNewsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return null
+     */
+    public function up()
+    {
+        Schema::create('newscategories', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('image_id')->unsigned()->nullable();
+            $table->json('status');
+            $table->json('title');
+             //排序
+            $table->integer('position')->unsigned()->default(0);
+            //meta
+            $table->json('slug');
+            $table->json('meta_title');
+            $table->json('meta_keywords');
+            $table->json('meta_description');
+
+            $table->json('show_homepage');//顯示於首頁
+
+
+            $table->timestamps();
+        });
+        Schema::create('newsitems', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->integer('image_id')->unsigned()->nullable();
+            $table->json('status');
+            $table->json('title');
+            $table->json('summary');
+            $table->json('body');
+            //類別id
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('newscategories');
+            //依照時間顯示項目
+            $table->date('show_date');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->boolean('no_end_date')->default(0);
+            //meta
+            $table->json('slug');
+            $table->json('meta_title');
+            $table->json('meta_keywords');
+            $table->json('meta_description');
+
+
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return null
+     */
+    public function down()
+    {
+        Schema::drop('newsitems');
+        Schema::drop('newscategories');
+    }
+}
