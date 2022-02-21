@@ -7,10 +7,6 @@ use Illuminate\Support\ServiceProvider;
 use TypiCMS\Modules\Core\Facades\TypiCMS;
 use TypiCMS\Modules\Core\Observers\SlugObserver;
 use Tonghe\Modules\News\Composers\SidebarViewComposer;
-/*
-use Tonghe\Modules\News\Facades\News;
-use Tonghe\Modules\News\Models\News;
-*/
 use Tonghe\Modules\News\Facades\News as FacadesNews;
 use Tonghe\Modules\News\Models\News;
 use Tonghe\Modules\News\Facades\Newscategories;
@@ -38,8 +34,8 @@ class ModuleServiceProvider extends ServiceProvider
         /*
          * Add the page in the view.
          */
-        $this->app->view->composer('newscategories::public.*', function ($view) {
-            $view->page = TypiCMS::getPageLinkedToModule('newscategories');
+        $this->app->view->composer('news::public.*', function ($view) {
+            $view->page = TypiCMS::getPageLinkedToModule('news');
         });
         /**
          * 最新消息
@@ -54,6 +50,11 @@ class ModuleServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../database/migrations/create_news_table.php.stub' => getMigrationFileName('create_news_table'),
         ], 'migrations');
+
+
+        $this->publishes([
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/news'),
+        ], 'views');
 
         AliasLoader::getInstance()->alias('News', FacadesNews::class);
 
