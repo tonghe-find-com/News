@@ -1,16 +1,16 @@
 <?php
 
-namespace Tonghe\Modules\News\Providers;
+namespace TypiCMS\Modules\News\Providers;
 
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use TypiCMS\Modules\Core\Facades\TypiCMS;
 use TypiCMS\Modules\Core\Observers\SlugObserver;
-use Tonghe\Modules\News\Composers\SidebarViewComposer;
-use Tonghe\Modules\News\Facades\News as FacadesNews;
-use Tonghe\Modules\News\Models\News;
-use Tonghe\Modules\News\Facades\Newscategories;
-use Tonghe\Modules\News\Models\Newscategory;
+use TypiCMS\Modules\News\Composers\SidebarViewComposer;
+use TypiCMS\Modules\News\Facades\News as FacadesNews;
+use TypiCMS\Modules\News\Models\News;
+use TypiCMS\Modules\News\Facades\Newscategories;
+use TypiCMS\Modules\News\Models\Newscategory;
 
 class ModuleServiceProvider extends ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tonghe\Modules\News\Http\Controllers\Category;
+namespace TypiCMS\Modules\News\Http\Controllers\Category;
 
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -8,7 +8,7 @@ use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 use TypiCMS\Modules\Core\Filters\FilterOr;
 use TypiCMS\Modules\Core\Http\Controllers\BaseApiController;
-use Tonghe\Modules\News\Models\Newscategory;
+use TypiCMS\Modules\News\Models\Newscategory;
 
 class ApiController extends BaseApiController
 {

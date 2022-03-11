@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tonghe\\Modules\\News\\": "src/"
+            "TypiCMS\\Modules\\News\\": "src/"
         }
     },
     "minimum-stability": "dev",
