@@ -85,6 +85,6 @@ class ModuleServiceProvider extends ServiceProvider
 
         $app->bind('Newscategories', Newscategory::class);
 
-        $app->bind('News', Newsitem::class);
+        $app->bind('News', News::class);
     }
 }

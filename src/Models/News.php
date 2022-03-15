@@ -86,15 +86,15 @@ class News extends Base
     {
         return route(app()->getLocale()."::news-item",[$this->category->slug,$this->slug]);
     }
-
-    public static function list()
+    
+    public static function list($number = 10)
     {
-        return self::published()->get();
+        return self::published()->releaseDate()->orderBy('show_date','DESC')->take($number)->get();
     }
 
     public function last()
     {
-       return self::published()->orderBy('show_date','DESC')->first();
+       return self::published()->releaseDate()->orderBy('show_date','DESC')->first();
     }
 
     public function getParentAttribute()
