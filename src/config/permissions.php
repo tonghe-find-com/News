@@ -13,10 +13,10 @@ return [
     /**
      * 最新消息
      */
-    'news' => [
-        'read news' => 'Read',
-        'create news' => 'Create',
-        'update news' => 'Update',
-        'delete news' => 'Delete',
+    'newsitems' => [
+        'read newsitems' => 'Read',
+        'create newsitems' => 'Create',
+        'update newsitems' => 'Update',
+        'delete newsitems' => 'Delete',
     ],
 ];
